@@ -16,6 +16,7 @@ class Ejemplo
 end
 
     cadenota = Ejemplo.new("   ¡Hola, Mundo!   ")
+    puts cadenota
     cadenota.MetodoString
 
 
