@@ -1,4 +1,4 @@
-#xchel
+# hecho por: xcheltron1234
 class ContadorDePalabras
     attr_accessor :texto
     
