@@ -28,13 +28,15 @@ class ContadorDePalabras
       to_s
     end
   end
-  
-  #Defino la cadena con la cual creare el objeto
-  #creo el objeto con la cadena creada anterioirmente
-  contador = ContadorDePalabras.new(texto)
-  #guardo el hash e invoco al metodo que cuenta las palabras
-  resultado = contador.contar_palabras_repetidas
-  #imprimo el resultado
-  resultado.each do |palabra, cantidad|
-    puts "#{palabra}: #{cantidad}"
+
+  contador = ContadorDePalabras.new("")
+  bandera = true
+  while bandera == true
+    puts ("")
+    #guardo el hash e invoco al metodo que cuenta las palabras
+    resultado = contador.contar_palabras_repetidas
+    #imprimo el resultado
+    resultado.each do |palabra, cantidad|
+      puts "#{palabra}: #{cantidad}"
+    end
   end
