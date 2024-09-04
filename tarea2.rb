@@ -24,8 +24,8 @@ class ContadorDePalabras
     def cambiar_texto (texto)
         @texto = texto
     end
-    def to_s
-      "Nombre: #{@texto}"
+    def imprimir
+      to_s
     end
   end
   
@@ -49,6 +49,5 @@ class ContadorDePalabras
       bandera = false
     end
   end
-  puts contador.to_s
 
-  puts contador
+  puts contador.imprimir
