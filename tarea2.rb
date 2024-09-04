@@ -1,4 +1,4 @@
-# Clase para contar palabras repetidas en una cadena de texto
+# hecho por: xcheltron1234
 class ContadorDePalabras
     attr_accessor :texto
     
@@ -31,23 +31,10 @@ class ContadorDePalabras
   
   #Defino la cadena con la cual creare el objeto
   #creo el objeto con la cadena creada anterioirmente
-  contador = ContadorDePalabras.new("")
-  bandera = true
-  while bandera == true
-    puts "Introduzca una cadena"
-    texto = $stdin.gets.chomp
-    contador.cambiar_texto(texto)
-    #guardo el hash e invoco al metodo que cuenta las palabras
-    resultado = contador.contar_palabras_repetidas
-    #imprimo el resultado
-    resultado.each do |palabra, cantidad|
-      puts "#{palabra}: #{cantidad}"
-    end
-    puts "quieres continuas s/si: "
-    c = $stdin.gets.chomp
-    if c != 's'
-      bandera = false
-    end
+  contador = ContadorDePalabras.new(texto)
+  #guardo el hash e invoco al metodo que cuenta las palabras
+  resultado = contador.contar_palabras_repetidas
+  #imprimo el resultado
+  resultado.each do |palabra, cantidad|
+    puts "#{palabra}: #{cantidad}"
   end
-
-  puts contador.imprimir
