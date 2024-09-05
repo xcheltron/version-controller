@@ -32,11 +32,19 @@ class ContadorDePalabras
   contador = ContadorDePalabras.new("")
   bandera = true
   while bandera == true
-    puts ("")
+    puts ("Introduzca la cadena")
+    texto = $stdin.gets.chomp
+    contador.cambiar_texto(texto)
     #guardo el hash e invoco al metodo que cuenta las palabras
     resultado = contador.contar_palabras_repetidas
     #imprimo el resultado
     resultado.each do |palabra, cantidad|
       puts "#{palabra}: #{cantidad}"
     end
+    puts "Desea continuar s/si"
+    c = $stdin.gets.chomp
+    if c != 's'
+      bandera = false
+    end
   end
+  puts contador.imprimir
